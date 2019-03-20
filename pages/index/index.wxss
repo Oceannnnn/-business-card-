@@ -1,0 +1,46 @@
+/**index.wxss**/
+@import "../cardOrganizer/cardOrganizer.wxss";
+.fixeHeader{
+  position:fixed;
+  width:100%;
+  top:0;
+  left:0;
+  z-index:1000;
+  background:#fff;
+}
+.s_header{
+  height: 100rpx;
+}
+.chooseItem{
+  /* width: 33.33%; */
+  width: 50%;
+  text-align: center;
+  justify-content: center;
+}
+.chooseItem .picker{
+  height: 80rpx;
+  line-height: 80rpx;
+  overflow:hidden;
+}
+.chooseDown{
+  width: 36rpx;
+  height: 36rpx;
+}
+.i_body{
+  margin-top: 180rpx;
+  min-height:750rpx;
+}
+.zanwuCon{
+  height: 70vh;
+}
+.promoteText{
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  padding: 20rpx 0;
+  background: #48ABCE;
+}
+.technical{
+  margin-bottom: 60rpx;
+}

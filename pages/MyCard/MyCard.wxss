@@ -1,0 +1,10 @@
+/* pages/MyCard/MyCard.wxss */
+@import "../toDetails/toDetails.wxss";
+.body{
+  width: 100%;
+  height: 100vh;
+}
+.bg_img{
+  width: 100%;
+  height: 100%;
+}

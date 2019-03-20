@@ -1,0 +1,52 @@
+/* pages/personalData/personalData.wxss */
+.avatar{
+  width: 150rpx;
+  height: 150rpx;
+  border: 2px solid #ccc;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+}
+.avatar_img{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+.photoCon{
+  width: 100%;
+  height: 40rpx;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+  background: rgba(0, 0, 0, 0.3);
+}
+.personalItems{
+  padding: 30rpx 20rpx;
+}
+.photo{
+  width: 40rpx;
+  height: 40rpx;
+}
+.perLeft{
+  color: #666;
+}
+.perLeft{
+  min-width: 10%;
+  max-width: 30%;
+}
+.input{
+  padding: 0 10rpx;
+  margin-left: 30rpx;
+  font-size: 32rpx;
+  min-width:70%;
+  max-width:70%;
+}
+textarea{
+  height: 100rpx;
+}
+.s_foot{
+  margin: 40rpx auto;
+}

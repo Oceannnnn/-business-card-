@@ -1,0 +1,69 @@
+{
+  "pages":[
+    "pages/MyCard/MyCard",
+    "pages/headImage/headImage",
+    "pages/index/index",
+    "pages/smallRoutine/smallRoutine",
+    "pages/facilitatePeople/facilitatePeople",
+    "pages/contentList/contentList",
+    "pages/informationRelease/informationRelease",
+    "pages/contentDetails/contentDetails",
+    "pages/category/category",
+    "pages/QRCode/QRCode",
+    "pages/morePhoto/morePhoto",
+    "pages/moreData/moreData",
+    "pages/myCards/myCards",
+    "pages/makingCards/makingCards",
+    "pages/certification/certification",
+    "pages/toDetails/toDetails",
+    "pages/personalData/personalData",
+    "pages/cardOrganizer/cardOrganizer",
+    "pages/promotionCards/promotionCards",
+    "pages/my/my",
+    "pages/toLogin/toLogin",
+    "pages/about/about"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#138BC8",
+    "navigationBarTitleText": "我的名片",
+    "navigationBarTextStyle":"white"
+  },
+  "tabBar": {
+    "color": "#999",
+    "backgroundColor": "#fff",
+    "selectedColor": "#138BC8",
+    "list": [
+      {
+        "pagePath": "pages/MyCard/MyCard",
+        "text": "我的名片",
+        "iconPath": "images/MyCard.png",
+        "selectedIconPath": "images/MyCard_active.png"
+      },
+      {
+        "pagePath": "pages/cardOrganizer/cardOrganizer",
+        "text": "名片夹",
+        "iconPath": "images/card.png",
+        "selectedIconPath": "images/card_active.png"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "名片圈",
+        "iconPath": "images/cards.png",
+        "selectedIconPath": "images/cards_active.png"
+      },
+      {
+        "pagePath": "pages/facilitatePeople/facilitatePeople",
+        "text": "便民信息",
+        "iconPath": "images/bianmin.png",
+        "selectedIconPath": "images/bianmin_active.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "个人中心",
+        "iconPath": "images/my.png",
+        "selectedIconPath": "images/my_active.png"
+      }
+    ]
+  }
+}

@@ -1,0 +1,2 @@
+/* pages/moreData/moreData.wxss */
+@import "../personalData/personalData.wxss"

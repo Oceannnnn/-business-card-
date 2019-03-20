@@ -1,0 +1,13 @@
+<!--pages/promotionCards/promotionCards.wxml-->
+<view class='p_20 f_32'>
+  <view class='p_20'>推广需支付￥{{money}}/张</view> 
+  <form report-submit='true' bindsubmit="pay">
+    <button class='s_foot mt_20' form-type='submit'disabled="{{disabled}}">微信支付</button>
+  </form> 
+  
+</view>
+<view class='f_32 p_20'>
+  服务特权
+  <view class='mt_20 f_28 c_999'>开通服务即可展示自己的名片，访客能第一时间联系到您。</view>
+  <view class='mt_20 f_28 c_999'>开通服务后，可以展示您上传的图片，丰富您的名片。</view>
+</view>

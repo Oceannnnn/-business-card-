@@ -1,0 +1,106 @@
+/* pages/toDetails/toDetails.wxss */
+.artice_footer{
+  font-size: 30rpx;
+  color: #666;
+  padding: 10rpx 0;
+}
+.artice_footer image{
+  width: 46rpx;
+  height: 46rpx;
+}
+.artice_footer .item{
+  padding: 16rpx 0;
+  width: 100%;
+  position: relative;
+}
+.artice_footer button{
+  opacity: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+.content{
+  margin-bottom: 140rpx;
+}
+.wx-switch-input{width:80rpx !important;height:40rpx !important;background: #138BC8 !important;border: #138BC8 !important;}
+.wx-switch-input::before{width:80rpx !important;height: 40rpx !important;}
+.wx-switch-input::after{width: 40rpx !important;height: 40rpx !important;}
+.clipboard{
+  padding: 5rpx 10rpx;
+  border: 1px #000 solid;
+  border-radius: 10rpx;
+}
+.left{
+  min-width: 15%;
+  max-width: 20%;
+}
+.more_left{
+  width: 80%;
+}
+.imagesList{
+  width: 100%;
+  border: 1px solid #ddd;
+}
+.index{
+  padding: 5rpx 20rpx;
+  border: 1px solid #138BC8;
+}
+.wufa{
+  margin-top: 400rpx;
+}
+.isShare{
+  padding: 5rpx 20rpx;
+  background: rgba(0, 0, 0, 0.3);
+  color: #fff;
+}
+.sao{
+  width: 50rpx;
+  height: 50rpx;
+}
+.artice_footer.swiper_down{
+  justify-content: flex-end;
+  padding: 20rpx;
+  font-size: 28rpx;
+}
+.new_img image{
+  background: #00A1E5;
+  padding:20rpx;
+  border-radius:50%;
+  margin-bottom: 10rpx;
+}
+.details_info{
+  border: 1px solid #eee;
+  width: 86%;
+  /* height: 84%; */
+  margin: 20rpx auto;
+  padding: 30rpx;
+}
+.myName{
+  font-size: 46rpx;
+  letter-spacing: 1px;
+  font-weight: 500;
+}
+.info_left{
+  width: 72%;
+}
+.info_right{
+  width: 25%;
+}
+.right_img{
+  width: 160rpx;
+  height: 160rpx;
+  border-radius: 10rpx;
+}
+.info_icon{
+  width: 40rpx;
+  height: 40rpx;
+}
+.header_s{
+  align-items: flex-start;
+}
+.address_h{
+  width: 85%;
+  line-height: 46rpx;
+}

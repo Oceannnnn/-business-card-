@@ -1,0 +1,40 @@
+<!--pages/certification/certification.wxml-->
+<view class='p_40 flex_ajf'>
+  <view class='aHeader flex_ajf'>
+    <view class='aMsg'>身份信息</view>
+    <view class='aLine'></view>
+  </view>
+  <view class='aBody2'>
+    <view class='f_28'>请提交照片，确保文字清晰、无反光、无遮挡</view>
+    <view class='auther_add'>
+      <view class="flex_i auther_item" catchtap='addUpCard'>
+        <image src='../../images/add.png'></image>
+        <view>身份证（人像面）</view>
+        <view class='upFix' wx:if="{{!srcUp == ''}}">
+          <image src="{{srcUp}}"></image>
+          <view class='change flex_i' catchtap='addUpCard'>
+            <image src='../../images/xiugai.png' class='xiugai'></image>
+            <view>点击修改</view>
+          </view>
+        </view>
+      </view>
+      <view class="flex_i auther_item" catchtap='addDownCard'>
+        <image src='../../images/add.png'></image>
+        <view>身份证（国徽面）</view>
+        <view class='downFix' wx:if="{{!srcDown == ''}}">
+          <image src="{{srcDown}}"></image>
+          <view class='change flex_i' catchtap='addDownCard'>
+            <image src='../../images/xiugai.png' class='xiugai'></image>
+            <view>点击修改</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class='aFooter b_165 pr' disabled="{{disabled}}">
+    <form report-submit='true' class='formBtn' bindsubmit="aCardConfirm">
+      <button class='formBtn' form-type='submit'></button>
+    </form>
+    <view class='aButton'>确定</view>
+  </view>
+</view>

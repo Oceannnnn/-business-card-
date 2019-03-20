@@ -1,0 +1,17 @@
+/* pages/informationRelease/informationRelease.wxss */
+@import "../morePhoto/morePhoto.wxss";
+.charge{
+  background: #F2f2f2;
+}
+.input{
+  padding: 20rpx 0;
+}
+textarea{
+  height: 300rpx;
+}
+.button{
+  margin-top: 80rpx;
+}
+.text{
+  width: 60%;
+}

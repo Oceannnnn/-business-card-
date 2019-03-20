@@ -1,0 +1,7 @@
+<!--pages/makingCards/makingCards.wxml--> 
+<view class='p_20 f_32'>
+  <view class='p_20'>再创建新名片需支付￥{{money}}/张</view>  
+  <form report-submit='true' bindsubmit="pay">
+    <button class='s_foot mt_20' form-type='submit' disabled="{{disabled}}">微信支付</button>
+  </form>
+</view>

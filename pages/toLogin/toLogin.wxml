@@ -1,0 +1,17 @@
+<!--pages/toLogin/toLogin.wxml-->
+<view class="my-dialog">
+  <view class="my-mask"></view>
+  <view class="my-container p_20">
+    <view class="title">微信授权</view>
+    <view class="content f_32 mt_20 mb_20">
+      请您允许我们获取您的用户信息权限，以便给您提供更好的用户体验
+    </view>
+    <view class="btn-row flex_i f_32 p_20 bor_t">
+      <view class="cancel" bindtap='cancel'>取消</view>
+      <view class="confirm pr">
+        <button class='formBtn' open-type="getUserInfo" bindgetuserinfo="getUserInfo"></button>
+        确定
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,72 @@
+<!--pages/my/my.wxml-->
+<view class="my-wrap">
+  <view class="top-info f_32 p_40 bor_b">
+    <navigator wx:if="{{state==0}}" class='flex_i pr' url='../toLogin/toLogin'>
+      <form report-submit='true' bindsubmit="bindsubmitLogin">
+        <button class='formBtn' form-type='submit'></button>
+      </form> 
+      <image class="avatar mr_20" src="../../images/wu.png"></image>
+      <view>
+        <view>未登录 <text class='f_28 c_999'>(请点击登录)</text> </view>
+        <view class="mt_20">当前有0张名片</view>
+      </view>
+    </navigator>
+    <view wx:else class="mb_20 flex_i">
+      <view class='avatar mr_20'>
+        <image class="mr_20 w100" src="{{headimg}}" mode="widthFix"></image>
+      </view>
+      <view>
+        <view class="nickname">{{nick_name}}</view>
+        <view class="mt_20">当前有{{card_num}}张名片</view>
+      </view>
+    </view>
+  </view>
+  <view class="nav-warp f_32">
+    <view class="nav-item p_40 bor_b flex_cb">
+        <form report-submit='true' class='formBtn' bindsubmit="makingCards">
+          <button class='formBtn' form-type='submit'></button>
+        </form> 
+        <view>制作名片</view>
+        <image class="arrow" src="../../images/last_Dawn.png"></image>
+    </view>
+    <view class="nav-item p_40 bor_b flex_cb" wx:if="{{!identify_flag}}">
+        <view>实名认证<text class='c_165' bindtap='certification'>（未认证）<text class='c_999 f_28'>请点击认证</text> </text></view>
+        <image class="arrow" src="../../images/last_Dawn.png"></image>
+    </view>
+    <view class="nav-item p_40 bor_b flex_cb" wx:if="{{is_money == 1}}">
+        <form report-submit='true' class='formBtn' bindsubmit="promotionCards">
+          <button class='formBtn' form-type='submit'></button>
+        </form> 
+        <view>名片推广</view>
+        <image class="arrow" src="../../images/last_Dawn.png"></image>
+    </view>
+    <view class="nav-item p_40 flex_cb">
+        <form report-submit='true' class='formBtn' bindsubmit="myCards">
+          <button class='formBtn' form-type='submit'></button>
+        </form> 
+        <view>名片交流群</view>
+        <image class="arrow" src="../../images/last_Dawn.png"></image>
+    </view>
+    <view class="nav-item p_40 bor_b flex_cb bor_top">
+        <form report-submit='true' class='formBtn' bindsubmit="about">
+          <button class='formBtn' form-type='submit'></button>
+        </form> 
+        <view>联系我们</view>
+        <image class="arrow" src="../../images/last_Dawn.png"></image>
+    </view>
+    <view class="nav-item p_40 bor_b flex_cb">
+        <form report-submit='true' bindsubmit="bindsubmitLogin" class='formBtn'>
+          <button class='formBtn' open-type='share' form-type='submit'></button>
+        </form> 
+        <view>推荐给朋友</view>
+        <image class="arrow" src="../../images/last_Dawn.png"></image>
+    </view>
+    <navigator class="nav-item p_40 bor_b flex_cb" url='../smallRoutine/smallRoutine'>
+        <form report-submit='true' class='formBtn' bindsubmit="bindsubmitLogin">
+          <button class='formBtn' form-type='submit'></button>
+        </form> 
+        <view>我也要做小程序</view>
+        <image class="arrow" src="../../images/last_Dawn.png"></image>
+    </navigator>
+  </view>
+</view>

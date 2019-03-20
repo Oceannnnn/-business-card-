@@ -1,0 +1,49 @@
+/* pages/cardOrganizer/cardOrganizer.wxss */
+
+.i_search image {
+  width: 46rpx;
+  height: 46rpx;
+  margin-right: 10rpx;
+  position: absolute;
+  left: 10rpx;
+}
+
+.i_search input {
+  width: 100%;
+  margin-left: 50rpx;
+}
+
+.s_search {
+  width: 20%;
+  text-align: center;
+  padding: 10rpx 0;
+}
+
+.i_header {
+  height: 110rpx;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  background: #fff;
+}
+
+.i_search {
+  margin: 0 20rpx;
+  width: 100%;
+  border: 1px solid #333;
+  border-radius: 10rpx;
+  padding: 10rpx;
+  position: relative;
+}
+
+.i_body {
+  margin-top: 110rpx;
+}
+
+.cards_img {
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 10rpx;
+}

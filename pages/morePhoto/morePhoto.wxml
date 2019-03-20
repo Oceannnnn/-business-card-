@@ -1,0 +1,25 @@
+<!--pages/morePhoto/morePhoto.wxml-->
+<view class='up-pic'>
+  <view class='flex pic-box p_20'>
+    <block wx:key="imgbox" wx:for="{{imgbox}}">
+      <view class='ap-box'>
+        <view class='add-pic'>
+          <image class=' image' src='{{item.image}}'></image>
+          <view class='img-de pr'>
+            <form report-submit='true' data-deindex='{{index}}' bindsubmit='delImage' data-id="{{item.id}}">
+              <button class='formBtn' form-type='submit'></button>
+            </form> 
+            <image class='img' src='../../images/cha.png'></image>   
+          </view>
+        </view>
+      </view>
+    </block>
+    <view class='add-pic' bindtap='addPic1' wx:if="{{imgbox.length<9}}">
+      <image class='img' src='../../images/add.png'></image>  
+    </view>
+  </view>
+</view>
+<view class='f_32 c_165 p_20'>注：最多上传9张</view>
+<form report-submit='true' bindsubmit="delImage" data-deindex='-1' data-id="">
+  <button class='s_foot' form-type='submit'>删除全部</button>
+</form>

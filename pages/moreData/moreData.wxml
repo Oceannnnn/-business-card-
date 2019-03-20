@@ -1,0 +1,23 @@
+<!--pages/moreData/moreData.wxml-->
+<view class='f_32 p_20 bor_bom'>更多信息</view>
+<view class='personalItems f_32 flex_i bor_b'>
+ <text class='perLeft'>QQ</text><input type='number' placeholder='请填写QQ号' class='input' value='{{myQQ}}' bindinput='myQQ'></input>
+</view>
+<view class='personalItems f_32 flex_i bor_b'>
+ <text class='perLeft'>微信号</text><input type='text' placeholder='请填写微信号' class='input' value='{{myWechat}}' bindinput='myWechat'></input>
+</view>
+<view class='personalItems f_32 flex_i bor_b'>
+ <text class='perLeft'>座右铭</text><input type='text' placeholder='请填写座右铭' class='input' value='{{myMotto}}' bindinput='myMotto'></input>
+</view>
+<view class='personalItems f_32 flex bor_b'>
+ <text class='perLeft'>签名</text><textarea placeholder='这家伙很懒，什么都没留下' class='input' value='{{myAutograph}}' bindinput='myAutograph'></textarea>
+</view>
+<view class='personalItems f_32 flex_i bor_b'>
+ <text class='perLeft'>标题</text><input type='text' placeholder='请填写标题' class='input' value='{{myTitle}}' bindinput='myTitle'></input>
+</view>
+<view class='personalItems f_32 flex bor_b'>
+ <text class='perLeft'>内容</text><textarea placeholder='请填写内容' class='input' value='{{myContent}}' bindinput='myContent'></textarea>
+</view>
+<form report-submit='true' bindsubmit="submitBtn">
+  <button class='s_foot' form-type='submit'>提交更新</button>
+</form>

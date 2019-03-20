@@ -1,0 +1,33 @@
+<!--pages/informationRelease/informationRelease.wxml-->
+<view wx:if="{{charge}}" class='charge p_20 f_32'>
+  本类信息发布一条需支付费用{{charge}}元
+</view>
+<view class='p_20 f_32'>
+  <view class='mb_20'>题目</view>
+  <view class='bor_t'>
+    <input type='text' placeholder='(请输入题目)' class='input' bindinput='bindTitle' value='{{title}}'></input>
+  </view>
+</view>
+<view class='p_20 f_32 bor_top bor_bom'>
+  <view class='mb_20'>内容描述</view>
+  <view class='bor_t'>
+    <textarea placeholder='(请输入你要描述的内容)' class='input' bindinput='bindContent' value='{{content}}'></textarea>
+  </view>
+</view>
+<view class='f_32 p_20 bor_bom'>
+  <view class='flex_i mb_20'>
+    联系人：
+    <input type='text' placeholder='请输入姓名' class='ml_20 text' bindinput='bindName' value='{{contact}}'></input>
+  </view>
+  <view class='bor_t'></view>
+  <view class='flex_i mt_20'>
+    电话号码：
+    <input type='text' placeholder='请输入电话号码' class='ml_20 text' bindinput='bindPhone' value='{{phone}}'></input>
+  </view>
+</view>
+<view class='button' bindtap='comfirm' disabled="{{disabled}}">
+  <button class='s_foot'>
+    确认发布
+    <text wx:if="{{charge}}">(共支付{{charge}}元)</text>
+  </button>
+</view>

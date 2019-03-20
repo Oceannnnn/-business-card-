@@ -1,0 +1,76 @@
+<!--pages/facilitatePeople/facilitatePeople.wxml-->
+<view class='main_header'>
+  <swiper indicator-dots interval="3000" duration="1000" autoplay='true' circular>
+    <block wx:for="{{imgUrls}}" wx:key="{{itemName}}" wx:for-item="itemName">
+      <swiper-item>
+        <image src="{{itemName.image}}" class="slide-image" />
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
+<view class='f_32 facilitateNotice flex p_20 bor_b'>
+  <view>浏览：{{sum}}</view>
+  <view class='ml_20'>发布：{{count}}</view>
+</view>
+<view class='menu f_28'>
+  <swiper indicator-dots indicator-color="rgba(0, 0, 0, .2)" indicator-active-color="#138BC8">
+    <block wx:for="{{gener}}" wx:for-item="itemGroup" wx:key="gener">
+      <swiper-item>
+        <view class='menu-box flex_f'>
+          <block wx:for="{{gener}}" wx:for-item="item" wx:key="itemGroup" wx:for-index="index">
+            <view class='item flex_af' data-id="{{item.id}}" data-title="{{item.title}}" bindtap="toContent">
+              <image mode='aspectFill' src='{{item.pic}}'></image>
+              <text class='sheng mt_10'>{{item.title}}</text>
+            </view>
+          </block>
+        </view>
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
+<!-- <view class='banner flex_i pr mt_20 mb_20'>
+  <view class='bannerItem flex_af' wx:for="{{gener}}" wx:key="{{gener}}" wx:if="{{index<3}}" wx:for-index="index" data-id="{{item.id}}" data-title="{{item.title}}" bindtap="toContent">
+    <image src="{{item.pic}}" class='bannerImg'></image>
+    <view class='f_28 mt_10'>{{item.title}}</view>
+  </view>
+  <view class='bannerItem flex_af' bindtap='tocategory' data-type='0'>
+    <image src="../../images/more.png" class='bannerImg'></image>
+    <view class='f_28 mt_20'>更多</view>
+  </view>
+</view> -->
+<view class='f_32 flex_i p_20 bor_top' bindtap='tocategory' data-type='1'>
+  <image src='../../images/release.png' class='release mr_20'></image>
+  发布信息
+</view>
+<view class='f_32 flex_i p_20 bor_top c_f57 bor_b' wx:if="{{facilities!=''}}">
+  <image src='../../images/tui.png' class='release mr_20'></image>
+  热门推荐
+</view>
+<view class='facilitiesBody f_32'>
+  <view wx:for="{{facilities}}" wx:key="{{facilities}}" class='facilitiesItem p_20 bor_bom' catchtap='toContentDetails' data-id='{{item.id}}' data-cate_id="{{item.cate_id}}">
+    <view class='flex_cb'>
+      <view class='flex mr_20 header'>
+        <image src='{{item.avatar}}' class='facilitiesImg'></image>
+        <view class='ml_20 header flex_cs'>
+          <view class='sheng'>{{item.contact}}</view>
+          <view class='category f_28 c_f mt_10'>
+            {{item.cate_name}}
+          </view>
+        </view>
+      </view>
+      <view class='phoneItem flex_i c_f f_28' data-phone='{{item.phone}}' catchtap='toCall'>
+        <image src='../../images/phone.png' class='release mr_20'></image>
+        拨打电话
+      </view>
+    </view>
+    <view class='mt_20 sheng3 contentText'>
+      【{{item.title}}】{{item.content}}
+    </view>
+    <view class='mt_20 f_28 flex_cb'>
+      {{item.time_ago}}发布
+      <view>
+        <text class='c_165'>{{item.saw}}</text> 人浏览
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,54 @@
+<!--pages/personalData/personalData.wxml-->
+<!-- 资料的填写(包括真实姓名,电话,住址,公司,行业(选择的下拉框),说明等) -->
+<view class='p_30 flex_af'>
+  <view class="avatar" bindtap='changeAvatar'>
+    <image class="avatar_img" src="{{head}}" mode="widthFix"></image>
+    <view class='photoCon flex_faj'>
+      <image src='../../images/photo.png' class='photo'></image>
+    </view>
+  </view>
+</view>
+<view class='personalItems bor_top f_32 flex_i bor_b'>
+ <text class='perLeft'>姓名</text><input type='text' placeholder='请填写你的姓名(必填)' class='input' value='{{myName}}' bindinput='myName'></input>
+</view>
+<view class='personalItems f_32 flex_i bor_b'>
+ <text class='perLeft'>职位/称谓</text><input type='text' placeholder='请填写你的职位或称谓(必填)' class='input' value='{{myPosition}}' bindinput='myPosition'></input>
+</view>
+<view class='personalItems f_32 flex_i bor_b'>
+ <text class='perLeft'>行业</text>
+ <picker class='input' bindchange="bindIndustryChange" value="{{industryIndex}}" range-key="{{'text'}}" range="{{industryArray}}">
+    <view class="picker">
+      <view wx:if="{{industryIndex==-1}}">{{catename}}</view>
+      <view wx:else>
+        <text class='perLeft' hidden='{{industryIndex!=-1?true:false}}'>请选择你的行业(必填)</text>{{industryArray[industryIndex].text}}
+      </view>
+    </view>
+  </picker>
+</view>
+<view class='personalItems f_32 flex_i bor_b'>
+ <text class='perLeft'>公司</text><input type='text' placeholder='请填写你的公司(必填)' class='input' value='{{myCompany}}' bindinput='myCompany'></input>
+</view>
+<view class='personalItems f_32 flex_i bor_b'>
+  <text class='perLeft'>地址</text>
+  <picker class='input' mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
+      <view class="picker">
+        <view wx:if="{{region==''}}">
+          <text wx:if="{{province}}">{{province}}{{city}}{{town}}</text>
+          <text wx:else class='perLeft'>请选择地区(必填)</text>
+        </view>
+        <view wx:else>
+          <text class='perLeft' hidden='{{region!=""?true:false}}'>请选择地区(必填)</text>
+          {{region[0]}}{{region[1]}}{{region[2]}}
+        </view>
+      </view>
+    </picker>
+</view>
+<view class='personalItems f_32 flex_i bor_b'>
+ <text class='perLeft'>具体地址</text><input type='text' placeholder='请填写具体地址(必填)' class='input' value='{{myAddress}}' bindinput='myAddress'></input>
+</view>
+<view class='bor_bom personalItems f_32 flex_i'>
+ <text class='perLeft'>手机号码</text><input type='text' placeholder='请填写手机号码(必填)' class='input' value='{{myPhone}}' bindinput='myPhone'></input>
+</view>
+<form report-submit='true' bindsubmit="submitBtn">
+  <button class='s_foot' form-type='submit'>提交更新</button>
+</form>

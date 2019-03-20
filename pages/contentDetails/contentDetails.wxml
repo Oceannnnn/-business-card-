@@ -1,0 +1,61 @@
+<!--pages/contentDetails/contentDetails.wxml-->
+<view class='flex p_20 bor_b'>
+  <image src='{{info.avatar}}' class='facilitiesImg'></image>
+  <view class='ml_20'>
+    <view>{{info.contact}}</view>
+    <view class='flex_i f_28'>
+      <view class='category c_f mt_10'>{{info.cate_name}}</view>
+    </view>
+  </view>
+</view>
+<view class='p_20 f_32 bor_bom'>
+  【{{info.title}}】{{info.content}}
+</view>
+<view class='p_20 f_32 bor_bom flex_cb'>
+  <view>{{info.time_ago}}</view>
+  {{info.saw}}人浏览
+</view>
+<view class='p_20 f_32 flex_cb bor_b'>
+  联系电话：{{info.phone}}
+  <view class='phoneItem flex_i c_f f_28' data-phone='{{info.phone}}' catchtap='toCall'>
+      <image src='../../images/phone.png' class='release mr_20'></image> 
+      拨打电话
+  </view>
+</view>
+<navigator target="miniProgram" open-type="navigate" appId="wx1773ca9a5221af5b" class='bor_bom pr'>
+  <view class='ad'>广告</view>
+  <image src='{{info.ad}}' class='adsense'></image>
+</navigator>
+<view class='f_32 flex_i p_20 c_f57' wx:if="{{facilities!=''}}">
+  <image src='../../images/tui.png' class='release mr_20'></image>
+  猜你喜欢
+</view>
+<view class='facilitiesBody f_32'>
+  <view wx:for="{{facilities}}" wx:key="{{facilities}}" class='facilitiesItem p_20 bor_bom' catchtap='toContentDetails' data-id='{{item.id}}'>
+    <view class='flex_cb'>
+      <view class='flex mr_20 header'>
+        <image src='{{item.avatar}}' class='facilitiesImg'></image>
+        <view class='ml_20 header flex_cs'>
+          <view class='sheng'>{{item.contact}}</view>
+          <view class='category f_28 c_f mt_10'>
+          {{item.cate_name}}
+          </view>
+        </view>
+      </view>
+      <view class='phoneItem flex_i c_f f_28' data-phone='{{item.phone}}' catchtap='toCall'>
+         <image src='../../images/phone.png' class='release mr_20'></image> 
+          拨打电话
+      </view>
+    </view>
+    <view class='mt_20 sheng3'>
+    【{{item.title}}】{{item.content}}
+    </view>
+    <view class='mt_20 f_28 flex_cb'>
+      {{item.time_ago}}发布
+      <view>
+        <text class='c_165'>{{item.saw}}</text>
+        人浏览
+      </view>
+    </view>
+  </view>
+</view>
